@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -52,7 +52,7 @@ export function UnifiedOnboarding() {
   const [showPlatformUseCases, setShowPlatformUseCases] = useState(false);
 
   const agenticFeatures = [
-    { icon: Bot, label: '6-Step Enforcement Pipeline', description: 'Classify â†’ Validate â†’ Transform â†’ Route â†’ Rate Limit â†’ Log' },
+    { icon: Bot, label: '6-Step Enforcement Pipeline', description: 'Classify → Validate → Transform → Route → Rate Limit → Log' },
     { icon: Users, label: 'HITL Supervisor Onboarding', description: 'Human-in-the-loop approval workflows' },
     { icon: Shield, label: 'Risk & Compliance Controls', description: 'PII/PCI/PHI detection and redaction' },
     { icon: Activity, label: 'Multi-Channel Notifications', description: 'Slack, Teams, Discord, webhooks' }

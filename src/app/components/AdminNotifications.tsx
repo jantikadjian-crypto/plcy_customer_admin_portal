@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -381,7 +381,7 @@ export function AdminNotifications() {
                       <p className="text-xs font-semibold text-blue-900 mb-1">{change.field}</p>
                       <div className="flex items-center gap-2 text-xs">
                         <span className="line-through text-red-700">{formatValue(change.oldValue)}</span>
-                        <span className="text-muted-foreground">â†’</span>
+                        <span className="text-muted-foreground">→</span>
                         <span className="font-semibold text-green-700">{formatValue(change.newValue)}</span>
                       </div>
                     </div>

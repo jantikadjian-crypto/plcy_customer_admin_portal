@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -781,7 +781,7 @@ export function ApprovalInbox() {
                                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                                       <p className="text-xs text-muted-foreground mb-1">Reversible</p>
                                       <p className="text-sm">
-                                        {approval.context.reversible ? 'âœ“ Yes' : 'âœ— No'}
+                                        {approval.context.reversible ? '✓ Yes' : '✗ No'}
                                       </p>
                                     </div>
                                   </div>

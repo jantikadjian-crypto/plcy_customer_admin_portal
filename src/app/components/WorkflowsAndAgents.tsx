@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -287,11 +287,11 @@ export function WorkflowsAndAgents() {
 
   const getAgentTypeIcon = (type: string) => {
     switch (type) {
-      case 'customer_support': return 'ðŸ‘¥';
-      case 'data_analyst': return 'ðŸ“Š';
-      case 'content_moderator': return 'ðŸ›¡ï¸';
-      case 'financial_advisor': return 'ðŸ’°';
-      default: return 'ðŸ¤–';
+      case 'customer_support': return '👥';
+      case 'data_analyst': return '📊';
+      case 'content_moderator': return '🛡️';
+      case 'financial_advisor': return '💰';
+      default: return '🤖';
     }
   };
 

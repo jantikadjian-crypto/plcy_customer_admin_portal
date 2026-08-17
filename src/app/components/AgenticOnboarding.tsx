@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -75,7 +75,7 @@ export function AgenticOnboarding() {
     {
       icon: Shield,
       title: '6-Step Enforcement Pipeline',
-      description: 'Configure PLCY\'s full governance pipeline: Classify â†’ Validate â†’ Transform â†’ Route â†’ Rate Limit â†’ Log'
+      description: 'Configure PLCY\'s full governance pipeline: Classify → Validate → Transform → Route → Rate Limit → Log'
     },
     {
       icon: Users,
@@ -138,7 +138,7 @@ export function AgenticOnboarding() {
           <div className="flex items-center gap-2 text-sm">
             <Clock className="w-4 h-4 text-muted-foreground" />
             <span className="text-muted-foreground">Setup time: ~10 minutes</span>
-            <span className="mx-2">â€¢</span>
+            <span className="mx-2">•</span>
             <CheckCircle className="w-4 h-4 text-green-600" />
             <span className="text-muted-foreground">10 configuration steps</span>
           </div>

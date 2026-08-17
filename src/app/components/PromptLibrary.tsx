@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -264,7 +264,7 @@ export function PromptLibrary() {
       id: 'prompt-003',
       timestamp: '2025-01-26T10:15:33.456789Z',
       decisionId: 'dec-20250126-003',
-      promptRaw: 'Bonjour, pouvez-vous m\'aider Ã  comprendre les options de livraison pour ma commande?',
+      promptRaw: 'Bonjour, pouvez-vous m\'aider à comprendre les options de livraison pour ma commande?',
       promptSanitized: undefined,
       classification: {
         type: 'customer_service',
@@ -470,7 +470,7 @@ export function PromptLibrary() {
       id: 'prompt-007',
       timestamp: '2025-01-26T09:42:13.890123Z',
       decisionId: 'dec-20250126-007',
-      promptRaw: 'è¯·å¸®æˆ‘æŸ¥è¯¢è®¢å•å· ORD-2025-8472 çš„ç‰©æµä¿¡æ¯',
+      promptRaw: '请帮我查询订单号 ORD-2025-8472 的物流信息',
       promptSanitized: undefined,
       classification: {
         type: 'order_tracking',
@@ -1196,9 +1196,9 @@ export function PromptLibrary() {
                                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                   <Clock className="w-3 h-3" />
                                   {new Date(prompt.timestamp).toLocaleString()}
-                                  <span className="text-muted-foreground">â€¢</span>
+                                  <span className="text-muted-foreground">•</span>
                                   <span>Decision: {prompt.decisionId}</span>
-                                  <span className="text-muted-foreground">â€¢</span>
+                                  <span className="text-muted-foreground">•</span>
                                   <span>{prompt.workflow.name}</span>
                                 </div>
                               </div>
@@ -1509,7 +1509,7 @@ export function PromptLibrary() {
                   Prompt Details
                 </DialogTitle>
                 <DialogDescription>
-                  Decision ID: {selectedPrompt.decisionId} â€¢ {new Date(selectedPrompt.timestamp).toLocaleString()}
+                  Decision ID: {selectedPrompt.decisionId} • {new Date(selectedPrompt.timestamp).toLocaleString()}
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4">

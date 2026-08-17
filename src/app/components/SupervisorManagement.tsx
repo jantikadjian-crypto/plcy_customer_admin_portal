@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -535,7 +535,7 @@ export function SupervisorManagement() {
                             <Home className="w-4 h-4" />
                             <AlertDescription className="text-sm">
                               Out of office {supervisor.outOfOffice.startDate} - {supervisor.outOfOffice.endDate}
-                              {supervisor.outOfOffice.backup && ` â€¢ Backup: ${supervisors.find(s => s.id === supervisor.outOfOffice.backup)?.name}`}
+                              {supervisor.outOfOffice.backup && ` • Backup: ${supervisors.find(s => s.id === supervisor.outOfOffice.backup)?.name}`}
                             </AlertDescription>
                           </Alert>
                         )}
@@ -742,7 +742,7 @@ export function SupervisorManagement() {
                 <Alert>
                   <Clock className="w-4 h-4" />
                   <AlertDescription>
-                    <strong>Current Coverage:</strong> 6am - 6pm PST (12 hours) â€¢ 
+                    <strong>Current Coverage:</strong> 6am - 6pm PST (12 hours) • 
                     <span className="text-orange-600 ml-1">No overnight coverage configured</span>
                   </AlertDescription>
                 </Alert>

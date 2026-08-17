@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -230,7 +230,7 @@ export function PolicyPacks() {
       type: 'composite',
       category: 'Compliance Framework',
       framework: 'ISO/IEC 42001',
-      description: 'End-to-end AIMS implementation covering scope definition, roles, risk assessment, test plan templates, monitoring evidence, and corrective action records â€” audit-ready for ISO/IEC 42001 certification.',
+      description: 'End-to-end AIMS implementation covering scope definition, roles, risk assessment, test plan templates, monitoring evidence, and corrective action records — audit-ready for ISO/IEC 42001 certification.',
       version: '2.0.0',
       downloads: 0,
       featured: true,
@@ -239,11 +239,11 @@ export function PolicyPacks() {
       recommendedFor: ['AI systems seeking ISO 42001 certification', 'Enterprise AI governance programs', 'Regulated industries building AIMS'],
       topControls: ['Risk Assessment Framework', 'AIMS Scope & Roles Governance', 'Monitoring Evidence Collection', 'Corrective Action Records', 'Policy Decision Logging'],
       testsCreated: ['AIMS Scope Validation Suite', 'Risk Register Completeness Check', 'Control Effectiveness Evaluation', 'Corrective Action Tracking Test'],
-      evidenceMapped: ['ISO 42001 Â§6.1 â€“ Risk assessment', 'ISO 42001 Â§6.2 â€“ AI objectives', 'ISO 42001 Â§8.4 â€“ Monitoring & measurement', 'ISO 42001 Â§10.1 â€“ Continual improvement', 'NIST AI RMF GOVERN-1.1'],
+      evidenceMapped: ['ISO 42001 §6.1 – Risk assessment', 'ISO 42001 §6.2 – AI objectives', 'ISO 42001 §8.4 – Monitoring & measurement', 'ISO 42001 §10.1 – Continual improvement', 'NIST AI RMF GOVERN-1.1'],
       defaultDeployMode: 'Monitor',
       impactPreview: 'Would have flagged 18 governance gaps across 3 AI systems in the last 7 days.',
       requiredIntegrations: ['Jira (corrective actions)', 'Slack (alerts)', 'SIEM (evidence export)'],
-      versionChanges: ['Added corrective action record templates (Â§10.2)', 'Expanded AIMS scope controls to cover agentic systems', 'New evidence export for ISO 42001 Annex A controls'],
+      versionChanges: ['Added corrective action record templates (§10.2)', 'Expanded AIMS scope controls to cover agentic systems', 'New evidence export for ISO 42001 Annex A controls'],
       rollbackNotes: 'Disabling rolls back to monitor-only mode. All collected evidence is preserved. Re-enabling resumes from last known good configuration.',
       controls: [
         { name: 'AIMS Scope & Roles Governance', type: 'Custom Control', required: true },
@@ -263,7 +263,7 @@ export function PolicyPacks() {
       type: 'composite',
       category: 'Security Framework',
       framework: 'OWASP LLM',
-      description: 'Full coverage of the OWASP Top 10 for LLM applications â€” prompt injection, sensitive information disclosure, supply chain risks, insecure output handling, excessive agency, and vector/embedding weaknesses.',
+      description: 'Full coverage of the OWASP Top 10 for LLM applications — prompt injection, sensitive information disclosure, supply chain risks, insecure output handling, excessive agency, and vector/embedding weaknesses.',
       version: '1.5.0',
       downloads: 0,
       featured: true,
@@ -271,8 +271,8 @@ export function PolicyPacks() {
       iconColor: 'text-red-700',
       recommendedFor: ['Any production LLM system', 'External-facing chatbots', 'Agentic systems with tool access', 'RAG pipelines'],
       topControls: ['Prompt Injection Shield', 'Sensitive Information Disclosure Guard', 'Supply Chain Validation', 'Excessive Agency Limiter', 'Output Handling Enforcement'],
-      testsCreated: ['OWASP LLM01 â€“ Prompt Injection Battery (120 scenarios)', 'OWASP LLM06 â€“ Sensitive Disclosure Tests', 'OWASP LLM08 â€“ Excessive Agency Scenarios', 'Vector Embedding Leakage Tests', 'Supply Chain Integrity Checks'],
-      evidenceMapped: ['OWASP LLM01 â€“ Prompt Injection', 'OWASP LLM02 â€“ Insecure Output Handling', 'OWASP LLM05 â€“ Supply Chain Vulnerabilities', 'OWASP LLM06 â€“ Sensitive Information Disclosure', 'OWASP LLM08 â€“ Excessive Agency', 'NIST AI RMF MEASURE-2.5'],
+      testsCreated: ['OWASP LLM01 – Prompt Injection Battery (120 scenarios)', 'OWASP LLM06 – Sensitive Disclosure Tests', 'OWASP LLM08 – Excessive Agency Scenarios', 'Vector Embedding Leakage Tests', 'Supply Chain Integrity Checks'],
+      evidenceMapped: ['OWASP LLM01 – Prompt Injection', 'OWASP LLM02 – Insecure Output Handling', 'OWASP LLM05 – Supply Chain Vulnerabilities', 'OWASP LLM06 – Sensitive Information Disclosure', 'OWASP LLM08 – Excessive Agency', 'NIST AI RMF MEASURE-2.5'],
       defaultDeployMode: 'Enforce',
       impactPreview: 'Would have blocked 52 of 18,400 requests in the last 7 days (0.28% block rate).',
       requiredIntegrations: ['Slack (#security-alerts)', 'PagerDuty (critical severity)', 'SIEM'],
@@ -304,7 +304,7 @@ export function PolicyPacks() {
       recommendedFor: ['Customer support chatbots', 'Ticketing AI assistants', 'Refund & billing automation', 'Live chat escalation systems'],
       topControls: ['PII Detection & Redaction', 'Refund Approval Threshold Gate', 'Transcript Retention Policy', 'Grounding & Citation Enforcement', 'HITL Escalation Routing'],
       testsCreated: ['Tone & Safety Evaluation (60 scenarios)', 'PII Leakage Battery', 'Refund Policy Accuracy Tests', 'Escalation Trigger Validation'],
-      evidenceMapped: ['GDPR Art. 5 â€“ Data minimization', 'ISO 42001 Â§8.4 â€“ Human oversight', 'NIST AI RMF MAP-3.5 â€“ Deployment context', 'EU AI Act Art. 14 â€“ Human oversight'],
+      evidenceMapped: ['GDPR Art. 5 – Data minimization', 'ISO 42001 §8.4 – Human oversight', 'NIST AI RMF MAP-3.5 – Deployment context', 'EU AI Act Art. 14 – Human oversight'],
       defaultDeployMode: 'Enforce',
       impactPreview: 'Would have blocked 37 of 12,400 requests and escalated 6 to human review in the last 7 days.',
       requiredIntegrations: ['Zendesk or Intercom (ticketing)', 'Slack (escalation alerts)', 'Data catalog (retention)'],
@@ -335,7 +335,7 @@ export function PolicyPacks() {
       recommendedFor: ['Autonomous AI agents with tool access', 'Multi-step workflow AI', 'AI systems that write, delete, or send', 'RPA + LLM pipelines'],
       topControls: ['Tool Allowlist Enforcement', 'Irreversible Action Approval Gate', 'Step-Level Trace Capture', 'Budget & Spend Limiter', 'Sandbox Test Execution'],
       testsCreated: ['Irreversible Action Boundary Tests (45 scenarios)', 'Tool Permission Escalation Battery', 'Budget Overflow Simulation', 'Multi-Step Traceability Audit'],
-      evidenceMapped: ['NIST AI RMF MANAGE-2.2 â€“ Incident response', 'OWASP LLM08 â€“ Excessive Agency', 'EU AI Act Art. 9 â€“ Risk management', 'ISO 42001 Â§8.5 â€“ AI system operation'],
+      evidenceMapped: ['NIST AI RMF MANAGE-2.2 – Incident response', 'OWASP LLM08 – Excessive Agency', 'EU AI Act Art. 9 – Risk management', 'ISO 42001 §8.5 – AI system operation'],
       defaultDeployMode: 'HITL',
       impactPreview: 'Would have routed 14 high-risk tool calls to human approval and blocked 3 budget overruns in the last 7 days.',
       requiredIntegrations: ['Slack (approval notifications)', 'Jira (incident tracking)', 'Cloud IAM (permission enforcement)'],
@@ -366,7 +366,7 @@ export function PolicyPacks() {
       recommendedFor: ['RAG-based chatbots and assistants', 'Internal knowledge base AI', 'Document Q&A systems', 'AI search and summarization'],
       topControls: ['Source Allowlist Enforcement', 'Citation Requirement Gate', 'Data Classification Check', 'Vector Leakage Detection', 'Retrieval Quality Evaluation'],
       testsCreated: ['Retrieval Relevance Evaluation (80 scenarios)', 'Citation Accuracy Battery', 'Vector Embedding Leakage Tests', 'Source Boundary Enforcement Tests'],
-      evidenceMapped: ['NIST AI RMF MAP-1.6 â€“ Transparency', 'GDPR Art. 5 â€“ Data minimization', 'ISO 42001 Â§8.3 â€“ AI system development', 'OWASP LLM05 â€“ Supply Chain'],
+      evidenceMapped: ['NIST AI RMF MAP-1.6 – Transparency', 'GDPR Art. 5 – Data minimization', 'ISO 42001 §8.3 – AI system development', 'OWASP LLM05 – Supply Chain'],
       defaultDeployMode: 'Enforce',
       impactPreview: 'Would have blocked 11 out-of-scope source retrievals and flagged 4 uncited responses in the last 7 days.',
       requiredIntegrations: ['Data catalog (source classification)', 'Vector DB (Pinecone, Weaviate, or pgvector)', 'Slack (citation alerts)'],
@@ -398,7 +398,7 @@ export function PolicyPacks() {
       recommendedFor: ['High-risk AI systems (Annex III)', 'AI in critical infrastructure, HR, education, law enforcement', 'AI systems sold into EU markets', 'GPAI model providers'],
       topControls: ['High-Risk Classification Gate', 'Human Oversight Enforcement', 'Robustness & Accuracy Evidence', 'Mandatory Logging (Art. 12)', 'Documentation Export (Art. 11)'],
       testsCreated: ['High-Risk Classification Validation', 'Human Oversight Trigger Tests', 'Robustness Adversarial Battery', 'Cybersecurity Control Verification', 'Accuracy Benchmark Suite'],
-      evidenceMapped: ['EU AI Act Art. 9 â€“ Risk management', 'EU AI Act Art. 10 â€“ Data governance', 'EU AI Act Art. 11 â€“ Technical documentation', 'EU AI Act Art. 12 â€“ Record-keeping', 'EU AI Act Art. 13 â€“ Transparency', 'EU AI Act Art. 14 â€“ Human oversight'],
+      evidenceMapped: ['EU AI Act Art. 9 – Risk management', 'EU AI Act Art. 10 – Data governance', 'EU AI Act Art. 11 – Technical documentation', 'EU AI Act Art. 12 – Record-keeping', 'EU AI Act Art. 13 – Transparency', 'EU AI Act Art. 14 – Human oversight'],
       defaultDeployMode: 'Enforce',
       impactPreview: 'Would have generated 6 compliance evidence packages and triggered 3 human oversight gates in the last 7 days.',
       requiredIntegrations: ['SIEM (Art. 12 logging)', 'Document management (technical documentation)', 'Slack (oversight alerts)', 'Identity provider (user consent)'],
@@ -431,12 +431,12 @@ export function PolicyPacks() {
       recommendedFor: ['Clinical decision support AI', 'Patient-facing chatbots', 'EHR-integrated AI', 'Telehealth AI assistants'],
       topControls: ['PHI Detection & Redaction', 'Clinical Escalation Routing', 'Sensitive Output Monitoring', 'Minimum Necessary Enforcement', 'HIPAA Breach Workflow'],
       testsCreated: ['PHI Leakage Battery (60 scenarios)', 'Clinical Escalation Trigger Tests', 'Sensitive Output Monitoring Eval', 'HIPAA Access Control Verification', 'Breach Notification Readiness Check'],
-      evidenceMapped: ['HIPAA Security Rule Â§164.312 â€“ Technical safeguards', 'HIPAA Privacy Rule Â§164.502 â€“ Minimum necessary', 'HIPAA Breach Notification Â§164.410', 'ISO 42001 Â§6.1 â€“ Risk assessment', 'NIST AI RMF MAP-5.1'],
+      evidenceMapped: ['HIPAA Security Rule §164.312 – Technical safeguards', 'HIPAA Privacy Rule §164.502 – Minimum necessary', 'HIPAA Breach Notification §164.410', 'ISO 42001 §6.1 – Risk assessment', 'NIST AI RMF MAP-5.1'],
       defaultDeployMode: 'Enforce',
       impactPreview: 'Would have blocked 29 PHI exposure attempts and escalated 2 clinical high-risk responses in the last 7 days.',
       requiredIntegrations: ['EHR system (context)', 'Slack (clinical alerts)', 'SIEM (breach evidence)', 'Identity provider (BAA enforcement)'],
       versionChanges: ['Expanded PHI detection to cover clinical notes and ICD-10 codes', 'New clinical escalation routing control with configurable severity thresholds', 'Added HIPAA breach notification workflow hooks'],
-      rollbackNotes: 'Rollback to v2.0.0 available. PHI detection rules revert immediately. Breach workflow hooks are disabled during rollback â€” manual monitoring required.',
+      rollbackNotes: 'Rollback to v2.0.0 available. PHI detection rules revert immediately. Breach workflow hooks are disabled during rollback — manual monitoring required.',
       controls: [
         { name: 'PHI Detection (Input)', type: 'Validation', required: true },
         { name: 'PHI Detection (Output)', type: 'Validation', required: true },
@@ -463,7 +463,7 @@ export function PolicyPacks() {
       recommendedFor: ['AI code generation tools', 'GitHub Copilot-style assistants', 'Automated PR review agents', 'IDE-integrated AI'],
       topControls: ['Secret & Credential Detection', 'License Compliance Check', 'Insecure Code Pattern Detection', 'Repository Access Control', 'IP Boundary Enforcement'],
       testsCreated: ['Secret Detection Battery (90 scenarios)', 'License Violation Tests', 'Insecure Code Output Evaluation (OWASP Top 10)', 'Repository Access Boundary Tests'],
-      evidenceMapped: ['OWASP LLM05 â€“ Supply Chain Vulnerabilities', 'OWASP LLM10 â€“ Model Theft', 'ISO 27001 A.8 â€“ Asset management', 'NIST CSF PR.DS-5 â€“ Data-at-rest protection'],
+      evidenceMapped: ['OWASP LLM05 – Supply Chain Vulnerabilities', 'OWASP LLM10 – Model Theft', 'ISO 27001 A.8 – Asset management', 'NIST CSF PR.DS-5 – Data-at-rest protection'],
       defaultDeployMode: 'Warn',
       impactPreview: 'Would have flagged 8 hardcoded secrets and 3 license violations in generated code in the last 7 days.',
       requiredIntegrations: ['GitHub/GitLab (repository access)', 'Slack (violation alerts)', 'License registry', 'SAST tooling (optional)'],
@@ -495,12 +495,12 @@ export function PolicyPacks() {
       recommendedFor: ['Financial advisory AI', 'Wealth management chatbots', 'Loan and credit AI', 'Insurance AI assistants'],
       topControls: ['Suitability Disclaimer Injection', 'High-Risk Advice Escalation', 'Record Retention Enforcement', 'Material Information Detection', 'FINRA Audit Evidence Export'],
       testsCreated: ['Suitability Disclaimer Verification', 'High-Risk Advice Detection Battery', 'Record Retention Compliance Tests', 'Material Non-Public Information Detection'],
-      evidenceMapped: ['FINRA Rule 2111 â€“ Suitability', 'FINRA Rule 4511 â€“ Record retention', 'SEC Rule 17a-4 â€“ Electronic records', 'MiFID II Art. 25 â€“ Suitability', 'ISO 42001 Â§6.1 â€“ Risk assessment'],
+      evidenceMapped: ['FINRA Rule 2111 – Suitability', 'FINRA Rule 4511 – Record retention', 'SEC Rule 17a-4 – Electronic records', 'MiFID II Art. 25 – Suitability', 'ISO 42001 §6.1 – Risk assessment'],
       defaultDeployMode: 'Enforce',
       impactPreview: 'Would have injected suitability disclaimers in 94 responses and escalated 5 high-risk advice requests in the last 7 days.',
       requiredIntegrations: ['CRM (Salesforce/HubSpot)', 'Slack (escalation alerts)', 'SIEM (FINRA evidence)', 'Archival storage (record retention)'],
       versionChanges: ['Updated suitability disclaimer templates for MiFID II 2025 revisions', 'Added material non-public information (MNPI) detection', 'New FINRA exam-ready evidence export format'],
-      rollbackNotes: 'Rollback to v1.3.0 available. Disclaimer injection rules revert immediately. Retained records are unaffected â€” retention is append-only.',
+      rollbackNotes: 'Rollback to v1.3.0 available. Disclaimer injection rules revert immediately. Retained records are unaffected — retention is append-only.',
       controls: [
         { name: 'Suitability Disclaimer Injection', type: 'Custom Control', required: true },
         { name: 'High-Risk Advice Escalation', type: 'Custom Control', required: true },
@@ -1342,7 +1342,7 @@ export function PolicyPacks() {
                           <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
                             <Clock className="w-3 h-3" />
                             <span>Deployed {deployed.deployedAt}</span>
-                            <span>â€¢</span>
+                            <span>•</span>
                             <span>Last updated {deployed.lastUpdated}</span>
                           </div>
 

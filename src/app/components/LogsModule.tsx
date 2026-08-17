@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -83,7 +83,7 @@ const sampleResponses = [
   
   "Subject Line Options:\n1. 'Finally: AI Governance That Actually Works for Enterprise'\n2. 'Your Board Asked About AI Risk. Here's Your Answer.'\n3. 'CIOs: Reduce AI Risk by 87% in 90 Days'\n\n**Email Body:**\n\nDear [First Name],\n\nYour organization is using AI. Your board is asking questions about risk. Your legal team is concerned about compliance.\n\nSound familiar?\n\nPLCY is the AI governance platform built specifically for enterprise leaders like you...",
   
-  "[Contract Analysis Complete]\n\n**Key Terms Identified:**\n- Contract Duration: 24 months with automatic renewal\n- Payment Terms: Net 30, monthly invoicing\n- Service Level: 99.9% uptime guarantee\n\n**Obligations:**\n- Vendor must maintain SOC 2 Type II certification\n- Customer must provide 60-day notice for data migration\n- Both parties subject to confidentiality for 5 years post-termination\n\n**Termination Clauses:**\n- Either party may terminate with 90-day written notice\n- Immediate termination allowed for material breach\n- Customer data must be returned within 30 days\n\n**Identified Risks:**\nâš ï¸ HIGH: No liability cap specified for data breaches\nâš ï¸ MEDIUM: Auto-renewal clause may lock in unfavorable terms\nâš ï¸ LOW: Vendor can modify SLA terms with 30-day notice"
+  "[Contract Analysis Complete]\n\n**Key Terms Identified:**\n- Contract Duration: 24 months with automatic renewal\n- Payment Terms: Net 30, monthly invoicing\n- Service Level: 99.9% uptime guarantee\n\n**Obligations:**\n- Vendor must maintain SOC 2 Type II certification\n- Customer must provide 60-day notice for data migration\n- Both parties subject to confidentiality for 5 years post-termination\n\n**Termination Clauses:**\n- Either party may terminate with 90-day written notice\n- Immediate termination allowed for material breach\n- Customer data must be returned within 30 days\n\n**Identified Risks:**\n⚠️ HIGH: No liability cap specified for data breaches\n⚠️ MEDIUM: Auto-renewal clause may lock in unfavorable terms\n⚠️ LOW: Vendor can modify SLA terms with 30-day notice"
 ];
 
 // Comprehensive log data generators with FULL details
@@ -1014,7 +1014,7 @@ export function LogsModule() {
         <Alert className="border-green-200 bg-green-50">
           <Activity className="h-4 w-4 text-green-600" />
           <AlertDescription className="text-green-800">
-            Live monitoring active â€¢ Collecting logs in real-time â€¢ Last update: 2 seconds ago â€¢ {securityLogs.length + aiActivityLogs.length + policyLogs.length + networkLogs.length + userActivityLogs.length} total logs captured with full detail
+            Live monitoring active • Collecting logs in real-time • Last update: 2 seconds ago • {securityLogs.length + aiActivityLogs.length + policyLogs.length + networkLogs.length + userActivityLogs.length} total logs captured with full detail
           </AlertDescription>
         </Alert>
       )}

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -1078,7 +1078,7 @@ export function RawLogsModule() {
       stage: 'classify',
       stageDuration: 41,
       input: {
-        prompt: 'ç§ã®ã‚¢ã‚«ã‚¦ãƒ³ãƒˆã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã—ãŸã„ã®ã§ã™ãŒ',
+        prompt: '私のアカウントをキャンセルしたいのですが',
         context: {
           detectedLanguage: 'ja',
           userLocale: 'ja-JP'
@@ -1667,7 +1667,7 @@ def execute_query(user_input):
               <CardTitle>Raw Audit Logs</CardTitle>
               <CardDescription>
                 Complete OTEL-compliant logs showing entire AI policy enforcement pipeline:
-                <span className="font-mono text-xs ml-2">classify â†’ redact â†’ route â†’ rateâ€‘limit â†’ validate â†’ log</span>
+                <span className="font-mono text-xs ml-2">classify → redact → route → rate‑limit → validate → log</span>
               </CardDescription>
             </div>
             <div className="flex gap-2">
@@ -1833,7 +1833,7 @@ def execute_query(user_input):
                             <Clock className="w-3 h-3 inline mr-1" />
                             {dateFrom && dateTo && (
                               <span>
-                                Range: <strong>{dateFrom} {timeFrom}</strong> â†’ <strong>{dateTo} {timeTo}</strong>
+                                Range: <strong>{dateFrom} {timeFrom}</strong> → <strong>{dateTo} {timeTo}</strong>
                               </span>
                             )}
                             {(!dateFrom || !dateTo) && (
@@ -1942,14 +1942,14 @@ def execute_query(user_input):
                             </div>
                             <div className="flex items-center gap-4 text-xs text-muted-foreground">
                               <span>{firstLog.workflowName}</span>
-                              <span>â€¢</span>
+                              <span>•</span>
                               <span className="flex items-center gap-1">
                                 <Clock className="w-3 h-3" />
                                 {new Date(firstLog.timestamp).toLocaleString()}
                               </span>
-                              <span>â€¢</span>
+                              <span>•</span>
                               <span>{logs.length} stages</span>
-                              <span>â€¢</span>
+                              <span>•</span>
                               <span>{totalDuration}ms</span>
                             </div>
                           </div>

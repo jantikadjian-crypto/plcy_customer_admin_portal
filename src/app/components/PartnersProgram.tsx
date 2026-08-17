@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -210,7 +210,7 @@ export function PartnersProgram() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl mb-2">
-            Good afternoon, Michael! ðŸ‘‹
+            Good afternoon, Michael! 👋
           </h1>
           <p className="text-muted-foreground">
             Welcome to your partner dashboard

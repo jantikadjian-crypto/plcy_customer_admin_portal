@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -46,7 +46,7 @@ export function RequestRoutingSettings() {
   const [routingRules, setRoutingRules] = useState([
     {
       id: '1',
-      name: 'Simple Queries â†’ GPT-3.5',
+      name: 'Simple Queries → GPT-3.5',
       condition: 'Token count < 500',
       target: 'OpenAI GPT-3.5 Turbo',
       priority: 1,
@@ -54,7 +54,7 @@ export function RequestRoutingSettings() {
     },
     {
       id: '2',
-      name: 'Complex Analysis â†’ GPT-4',
+      name: 'Complex Analysis → GPT-4',
       condition: 'Token count > 500',
       target: 'OpenAI GPT-4',
       priority: 2,
@@ -62,7 +62,7 @@ export function RequestRoutingSettings() {
     },
     {
       id: '3',
-      name: 'EU Traffic â†’ Azure EU',
+      name: 'EU Traffic → Azure EU',
       condition: 'Request origin: EU',
       target: 'Azure OpenAI (EU West)',
       priority: 3,
@@ -70,7 +70,7 @@ export function RequestRoutingSettings() {
     },
     {
       id: '4',
-      name: 'PII Detected â†’ On-Prem',
+      name: 'PII Detected → On-Prem',
       condition: 'Contains PII',
       target: 'On-Premise Llama 3',
       priority: 4,
@@ -133,7 +133,7 @@ export function RequestRoutingSettings() {
         <AlertDescription className="text-sm">
           <strong>Smart Request Routing</strong> optimizes cost, performance, and compliance by intelligently routing AI requests across multiple providers. 
           <span className="block mt-1 text-xs text-muted-foreground">
-            Current month savings: $2,847 (62% cost reduction) â€¢ 12,431 requests routed
+            Current month savings: $2,847 (62% cost reduction) • 12,431 requests routed
           </span>
         </AlertDescription>
       </Alert>
@@ -391,7 +391,7 @@ export function RequestRoutingSettings() {
                     <div className="flex-1">
                       <div className="text-sm font-medium">{rule.name}</div>
                       <div className="text-xs text-muted-foreground">
-                        {rule.condition} â†’ {rule.target}
+                        {rule.condition} → {rule.target}
                       </div>
                     </div>
                   </div>

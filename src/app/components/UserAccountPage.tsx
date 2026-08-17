@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -270,7 +270,7 @@ export function UserAccountPage() {
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Payment method</span>
-                      <span className="font-medium">â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ 4242</span>
+                      <span className="font-medium">•••• •••• •••• 4242</span>
                     </div>
                   </div>
 
@@ -361,7 +361,7 @@ export function UserAccountPage() {
                       </div>
                       <div>
                         <p className="font-medium">Current Session</p>
-                        <p className="text-xs text-muted-foreground">Chrome on macOS â€¢ San Francisco, CA</p>
+                        <p className="text-xs text-muted-foreground">Chrome on macOS • San Francisco, CA</p>
                       </div>
                     </div>
                     <Badge className="bg-green-100 text-green-800">Active</Badge>
@@ -374,7 +374,7 @@ export function UserAccountPage() {
                       </div>
                       <div>
                         <p className="font-medium">Mobile App</p>
-                        <p className="text-xs text-muted-foreground">iOS â€¢ Last active 2 hours ago</p>
+                        <p className="text-xs text-muted-foreground">iOS • Last active 2 hours ago</p>
                       </div>
                     </div>
                     <Button variant="ghost" size="sm">Revoke</Button>

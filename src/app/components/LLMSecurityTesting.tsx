@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -697,7 +697,7 @@ export function LLMSecurityTesting() {
                             </Badge>
                           </div>
                           <p className="text-sm text-muted-foreground mb-3">
-                            {new Date(run.startedAt).toLocaleString()} â€¢ Duration: {formatDuration(run.duration)}
+                            {new Date(run.startedAt).toLocaleString()} • Duration: {formatDuration(run.duration)}
                           </p>
                           <div className="grid grid-cols-4 gap-4 text-sm">
                             <div>
@@ -898,21 +898,21 @@ export function LLMSecurityTesting() {
                           <p className="font-medium">Hourly Testing</p>
                           <p className="text-sm text-muted-foreground">Critical security checks every hour</p>
                         </div>
-                        <Badge variant="outline">âœ“ Active</Badge>
+                        <Badge variant="outline">✓ Active</Badge>
                       </div>
                       <div className="flex items-center justify-between p-3 bg-muted/30 rounded">
                         <div>
                           <p className="font-medium">Daily Testing</p>
                           <p className="text-sm text-muted-foreground">Comprehensive daily security scans</p>
                         </div>
-                        <Badge variant="outline">âœ“ Active</Badge>
+                        <Badge variant="outline">✓ Active</Badge>
                       </div>
                       <div className="flex items-center justify-between p-3 bg-muted/30 rounded">
                         <div>
                           <p className="font-medium">Monthly Audits</p>
                           <p className="text-sm text-muted-foreground">Full OWASP LLM Top 10 audit</p>
                         </div>
-                        <Badge variant="outline">âœ“ Active</Badge>
+                        <Badge variant="outline">✓ Active</Badge>
                       </div>
                     </div>
                   </CardContent>

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -340,7 +340,7 @@ export function ConfigurationHistory({ packId }: { packId: string }) {
                               <p className="text-muted-foreground">
                                 <span className="font-medium">{change.field}:</span>{' '}
                                 <span className="line-through">{formatValue(change.oldValue)}</span>
-                                {' â†’ '}
+                                {' → '}
                                 <span className="text-green-700 font-semibold">{formatValue(change.newValue)}</span>
                               </p>
                             </div>
@@ -405,7 +405,7 @@ export function ConfigurationHistory({ packId }: { packId: string }) {
                 <div className="space-y-1">
                   {rollbackTarget.changes.map((change, i) => (
                     <div key={i} className="text-xs text-blue-800">
-                      â€¢ {change.controlName && `${change.controlName} - `}
+                      • {change.controlName && `${change.controlName} - `}
                       {change.field}: <span className="font-semibold">{formatValue(change.newValue)}</span>
                     </div>
                   ))}

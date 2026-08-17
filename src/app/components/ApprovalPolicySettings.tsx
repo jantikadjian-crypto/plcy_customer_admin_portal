@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -193,7 +193,7 @@ export function ApprovalPolicySettings() {
           <strong>Human-in-the-Loop (HITL) Approvals</strong> ensure high-risk AI agent actions require human review before execution. 
           Configure approval policies, approver roles, and notification settings.
           <span className="block mt-1 text-xs text-muted-foreground">
-            Active approvals: 5 pending â€¢ 127 approved this month â€¢ 3 rejected
+            Active approvals: 5 pending • 127 approved this month • 3 rejected
           </span>
         </AlertDescription>
       </Alert>
@@ -570,7 +570,7 @@ export function ApprovalPolicySettings() {
                   <span className="text-xs text-muted-foreground">Avg Response Time</span>
                 </div>
                 <p className="text-2xl font-semibold">12m</p>
-                <p className="text-xs text-green-600">â†“ 23% vs last month</p>
+                <p className="text-xs text-green-600">↓ 23% vs last month</p>
               </div>
 
               <div className="p-4 bg-green-50 border border-green-200 rounded-lg">

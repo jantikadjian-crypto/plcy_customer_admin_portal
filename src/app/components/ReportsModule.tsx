@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -714,7 +714,7 @@ export function ReportsModule() {
               })()}
               <div className="pt-2 flex items-center justify-end text-xs border-t">
                 <Button variant="link" size="sm" className="h-auto p-0 text-xs">
-                  View Full Report â†’
+                  View Full Report →
                 </Button>
               </div>
             </CardContent>
@@ -813,7 +813,7 @@ export function ReportsModule() {
               })()}
               <div className="pt-2 flex items-center justify-end text-xs border-t">
                 <Button variant="link" size="sm" className="h-auto p-0 text-xs">
-                  View All Risks â†’
+                  View All Risks →
                 </Button>
               </div>
             </CardContent>
@@ -914,7 +914,7 @@ export function ReportsModule() {
               })()}
               <div className="pt-2 flex items-center justify-end text-xs border-t">
                 <Button variant="link" size="sm" className="h-auto p-0 text-xs">
-                  View HITL Module â†’
+                  View HITL Module →
                 </Button>
               </div>
             </CardContent>
@@ -1006,7 +1006,7 @@ export function ReportsModule() {
               })()}
               <div className="pt-2 flex items-center justify-end text-xs border-t">
                 <Button variant="link" size="sm" className="h-auto p-0 text-xs">
-                  View All Systems â†’
+                  View All Systems →
                 </Button>
               </div>
             </CardContent>

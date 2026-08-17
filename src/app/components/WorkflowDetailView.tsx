@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -747,7 +747,7 @@ export function WorkflowDetailView({ workflowId, onBack, onViewApproval }: Workf
             </Badge>
           </div>
           <p className="text-muted-foreground">
-            {workflow.agentName} â€¢ Started {new Date(workflow.startedAt).toLocaleString()}
+            {workflow.agentName} • Started {new Date(workflow.startedAt).toLocaleString()}
           </p>
         </div>
         <div className="flex gap-2">

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -553,7 +553,7 @@ export function ApprovalQueue() {
                         <div key={index} className="flex items-center gap-2 text-xs text-muted-foreground">
                           <Activity className="w-3 h-3" />
                           <span>{new Date(entry.timestamp).toLocaleString()}</span>
-                          <span>â€¢</span>
+                          <span>•</span>
                           <span>{entry.action}</span>
                           <span>by {entry.userId}</span>
                         </div>

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { PLCYCloudSetup } from './PLCYCloudSetup';
 import { RequestRoutingSettings } from './RequestRoutingSettings';
 import { ApprovalPolicySettings } from './ApprovalPolicySettings';
@@ -369,7 +369,7 @@ export function SettingsPage() {
                 <div className="flex gap-2">
                   <Input 
                     type="password" 
-                    defaultValue="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" 
+                    defaultValue="••••••••••••••••••••" 
                     className="flex-1 font-mono"
                     readOnly
                   />
@@ -624,7 +624,7 @@ export function SettingsPage() {
                       <Alert className="bg-purple-50 border-purple-200">
                         <Info className="h-4 w-4 text-purple-600" />
                         <AlertDescription className="text-purple-900 text-xs">
-                          ðŸ’¾ Continuous transaction logs enable recovery to any second. Storage cost is approximately 2-3x standard backups.
+                          💾 Continuous transaction logs enable recovery to any second. Storage cost is approximately 2-3x standard backups.
                         </AlertDescription>
                       </Alert>
                     </div>

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -541,7 +541,7 @@ export function AgentSessionDebugger({ workflowId, onBack }: AgentSessionDebugge
             <div>
               <h1 className="text-2xl font-semibold mb-1">{selectedSession.name}</h1>
               <p className="text-sm text-muted-foreground">
-                {selectedSession.agentName} â€¢ {new Date(selectedSession.startedAt).toLocaleString()}
+                {selectedSession.agentName} • {new Date(selectedSession.startedAt).toLocaleString()}
               </p>
             </div>
             <div className="flex gap-2">
@@ -750,7 +750,7 @@ export function AgentSessionDebugger({ workflowId, onBack }: AgentSessionDebugge
                                       <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                         <Timer className="w-3 h-3" />
                                         <span>Duration: {formatDuration(step.duration)}</span>
-                                        <span className="mx-2">â€¢</span>
+                                        <span className="mx-2">•</span>
                                         <Clock className="w-3 h-3" />
                                         <span>{new Date(step.timestamp).toLocaleTimeString()}</span>
                                       </div>

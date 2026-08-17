@@ -1,4 +1,4 @@
-﻿import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { 
@@ -270,17 +270,17 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
 
       <div class="stats-grid">
         <div class="stat-box success">
-          <div class="stat-label">âœ“ Compliant</div>
+          <div class="stat-label">✓ Compliant</div>
           <div class="stat-value success">94%</div>
           <div class="stat-detail">32 systems</div>
         </div>
         <div class="stat-box warning">
-          <div class="stat-label">â± Pending Review</div>
+          <div class="stat-label">⏱ Pending Review</div>
           <div class="stat-value warning">4%</div>
           <div class="stat-detail">2 systems</div>
         </div>
         <div class="stat-box danger">
-          <div class="stat-label">âœ— Non-Compliant</div>
+          <div class="stat-label">✗ Non-Compliant</div>
           <div class="stat-value danger">2%</div>
           <div class="stat-detail">1 system</div>
         </div>
@@ -299,7 +299,7 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
         <div class="progress-bar">
           <div class="progress-fill" style="width: 98%"></div>
         </div>
-        <div class="framework-detail">34 of 35 requirements met â€¢ 2 High-Risk Systems Compliant</div>
+        <div class="framework-detail">34 of 35 requirements met • 2 High-Risk Systems Compliant</div>
       </div>
 
       <div class="framework-item">
@@ -310,7 +310,7 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
         <div class="progress-bar">
           <div class="progress-fill" style="width: 91%"></div>
         </div>
-        <div class="framework-detail">28 of 31 controls implemented â€¢ 3 controls in progress</div>
+        <div class="framework-detail">28 of 31 controls implemented • 3 controls in progress</div>
       </div>
 
       <div class="framework-item">
@@ -321,7 +321,7 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
         <div class="progress-bar">
           <div class="progress-fill warning" style="width: 87%"></div>
         </div>
-        <div class="framework-detail">22 of 25 categories addressed â€¢ 3 categories require attention</div>
+        <div class="framework-detail">22 of 25 categories addressed • 3 categories require attention</div>
       </div>
     </div>
   </div>
@@ -330,7 +330,7 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
     <h2 class="section-title">Key Findings & Recommendations</h2>
     <div class="card">
       <div class="finding-box success">
-        <div class="finding-title">âœ“ Strong Overall Compliance</div>
+        <div class="finding-title">✓ Strong Overall Compliance</div>
         <div class="finding-description">
           The organization demonstrates excellent compliance with 94% compliance rate, exceeding the industry 
           average of 87%. All high-risk AI systems are properly classified and have appropriate oversight 
@@ -339,7 +339,7 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
       </div>
 
       <div class="finding-box warning">
-        <div class="finding-title">âš  Documentation Gaps Identified</div>
+        <div class="finding-title">⚠ Documentation Gaps Identified</div>
         <div class="finding-description">
           Two AI systems require updated risk assessments and data lineage documentation. The Recommendation 
           Engine system (deployed in production) and Customer Segmentation Model need immediate attention 
@@ -348,7 +348,7 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
       </div>
 
       <div class="finding-box info">
-        <div class="finding-title">â†’ Recommended Actions</div>
+        <div class="finding-title">→ Recommended Actions</div>
         <div class="finding-description">
           <strong>Priority 1:</strong> Schedule compliance review for Recommendation Engine system by November 15, 2025.<br>
           <strong>Priority 2:</strong> Update data lineage documentation for Customer Segmentation Model.<br>
@@ -367,20 +367,20 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
       <div style="margin-bottom: 20px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 6px;">
         <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
           <strong>Fraud Detection ML Model v2.3</strong>
-          <span style="color: #16a34a; font-weight: 600;">âœ“ Compliant</span>
+          <span style="color: #16a34a; font-weight: 600;">✓ Compliant</span>
         </div>
         <div style="font-size: 13px; color: #64748b;">
-          Status: Active â€¢ Risk Level: High â€¢ Last Audit: Oct 28, 2025 â€¢ Next Review: Jan 28, 2026
+          Status: Active • Risk Level: High • Last Audit: Oct 28, 2025 • Next Review: Jan 28, 2026
         </div>
       </div>
 
       <div style="margin-bottom: 20px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 6px;">
         <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
           <strong>Loan Application Scoring System</strong>
-          <span style="color: #16a34a; font-weight: 600;">âœ“ Compliant</span>
+          <span style="color: #16a34a; font-weight: 600;">✓ Compliant</span>
         </div>
         <div style="font-size: 13px; color: #64748b;">
-          Status: Active â€¢ Risk Level: High â€¢ Last Audit: Nov 1, 2025 â€¢ Next Review: Feb 1, 2026
+          Status: Active • Risk Level: High • Last Audit: Nov 1, 2025 • Next Review: Feb 1, 2026
         </div>
       </div>
 
@@ -389,21 +389,21 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
       <div style="margin-bottom: 12px; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px;">
         <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
           <strong>Customer Analytics Engine v2.1</strong>
-          <span style="color: #16a34a; font-weight: 600;">âœ“ Compliant</span>
+          <span style="color: #16a34a; font-weight: 600;">✓ Compliant</span>
         </div>
       </div>
 
       <div style="margin-bottom: 12px; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px;">
         <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
           <strong>Content Moderation AI</strong>
-          <span style="color: #16a34a; font-weight: 600;">âœ“ Compliant</span>
+          <span style="color: #16a34a; font-weight: 600;">✓ Compliant</span>
         </div>
       </div>
 
       <div style="margin-bottom: 12px; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px;">
         <div style="display: flex; justify-between; margin-bottom: 4px;">
           <strong>Recommendation Engine</strong>
-          <span style="color: #ca8a04; font-weight: 600;">â± Pending Review</span>
+          <span style="color: #ca8a04; font-weight: 600;">⏱ Pending Review</span>
         </div>
       </div>
     </div>
@@ -517,7 +517,7 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
   <div class="footer">
     <p><strong>PLCY</strong> - AI Governance Platform</p>
     <p>This report is confidential and intended for internal use only.</p>
-    <p>Generated by PLCY v1.0 â€¢ ${new Date().toLocaleDateString()}</p>
+    <p>Generated by PLCY v1.0 • ${new Date().toLocaleDateString()}</p>
   </div>
 </body>
 </html>`;
@@ -791,7 +791,7 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
                     <p className="text-sm font-medium">{event.action}</p>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-xs text-muted-foreground">{event.time}</span>
-                      <span className="text-xs text-muted-foreground">â€¢</span>
+                      <span className="text-xs text-muted-foreground">•</span>
                       <span className="text-xs text-muted-foreground">{event.user}</span>
                       <Badge variant="secondary" className="text-xs ml-auto">{event.type}</Badge>
                     </div>
@@ -827,12 +827,12 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
             <div className="p-4 border rounded-lg">
               <p className="text-sm text-muted-foreground mb-1">High-Risk Systems</p>
               <div className="text-xl font-bold">2</div>
-              <p className="text-xs text-green-600 mt-1">âœ“ All compliant</p>
+              <p className="text-xs text-green-600 mt-1">✓ All compliant</p>
             </div>
             <div className="p-4 border rounded-lg">
               <p className="text-sm text-muted-foreground mb-1">Limited Risk Systems</p>
               <div className="text-xl font-bold">8</div>
-              <p className="text-xs text-green-600 mt-1">âœ“ All compliant</p>
+              <p className="text-xs text-green-600 mt-1">✓ All compliant</p>
             </div>
           </div>
 
@@ -911,9 +911,9 @@ export function ReportViewer({ report, onClose }: ReportViewerProps) {
                     <p className="font-medium">{system.name}</p>
                     <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
                       <span>Uptime: {system.uptime}%</span>
-                      <span>â€¢</span>
+                      <span>•</span>
                       <span>Latency: {system.latency}ms</span>
-                      <span>â€¢</span>
+                      <span>•</span>
                       <span>Errors: {system.errors}%</span>
                     </div>
                   </div>

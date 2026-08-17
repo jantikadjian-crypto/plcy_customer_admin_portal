@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -233,15 +233,15 @@ export function HITLGuardrails() {
           whatItDoes: 'Scans all AI outputs for email address patterns (e.g., user@example.com) and flags them for human review before sending.',
           whyItMatters: 'Email addresses are personal data under GDPR/CCPA. Sharing incorrect or unauthorized email addresses can violate privacy regulations and damage customer trust.',
           examples: [
-            'AI response: "Contact support@company.com" â†’ Flagged if external recipient',
-            'AI response: "Your account is john.doe@gmail.com" â†’ Always flagged for verification'
+            'AI response: "Contact support@company.com" → Flagged if external recipient',
+            'AI response: "Your account is john.doe@gmail.com" → Always flagged for verification'
           ],
           technicalDetails: {
             method: 'Regex pattern matching + NLP entity recognition',
             falsePositiveRate: '~2%',
             processingTime: '<50ms'
           },
-          complianceImpact: ['GDPR Article 5', 'CCPA Â§ 1798.100', 'ISO 27701'],
+          complianceImpact: ['GDPR Article 5', 'CCPA § 1798.100', 'ISO 27701'],
           recommendedFor: ['Customer support responses', 'External communications', 'Data export requests']
         },
         { 
@@ -252,9 +252,9 @@ export function HITLGuardrails() {
           whatItDoes: 'Identifies phone numbers (US, international, with/without country codes) in AI responses and requires human verification before proceeding.',
           whyItMatters: 'Phone numbers are sensitive PII. Incorrect numbers can lead to privacy breaches, harassment, or failed critical communications.',
           examples: [
-            'AI: "Call us at (555) 123-4567" â†’ Flagged for verification',
-            'AI: "Your number on file is +1-555-987-6543" â†’ Requires confirmation',
-            'International: "+44 20 7123 4567" â†’ Detected and flagged'
+            'AI: "Call us at (555) 123-4567" → Flagged for verification',
+            'AI: "Your number on file is +1-555-987-6543" → Requires confirmation',
+            'International: "+44 20 7123 4567" → Detected and flagged'
           ],
           technicalDetails: {
             method: 'Multi-format regex + libphonenumber validation',
@@ -272,9 +272,9 @@ export function HITLGuardrails() {
           whatItDoes: 'Scans for street addresses, postal codes, and location information in AI outputs to prevent unauthorized disclosure.',
           whyItMatters: 'Physical addresses can be used for identity theft, stalking, or unwanted mail. Critical for protecting vulnerable individuals.',
           examples: [
-            'AI: "Ship to 123 Main St, Anytown, CA 90210" â†’ Requires review',
-            'AI: "Your registered address is..." â†’ Flagged for verification',
-            'Partial addresses: "Lives on Main Street in Boston" â†’ Also detected'
+            'AI: "Ship to 123 Main St, Anytown, CA 90210" → Requires review',
+            'AI: "Your registered address is..." → Flagged for verification',
+            'Partial addresses: "Lives on Main Street in Boston" → Also detected'
           ],
           technicalDetails: {
             method: 'NER (Named Entity Recognition) + geocoding validation',
@@ -292,10 +292,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Detects medical conditions, diagnoses, medications, and health data. Triggers immediate review due to HIPAA sensitivity.',
           whyItMatters: 'Medical information is protected under HIPAA (US), GDPR (EU), and similar laws worldwide. Unauthorized disclosure can result in massive fines and lawsuits.',
           examples: [
-            'AI: "Based on your diabetes diagnosis..." â†’ Critical flag',
-            'AI: "You mentioned taking Metformin" â†’ Health data detected',
-            'AI: "Your recent surgery on..." â†’ Immediate review required',
-            'Mental health: "Your anxiety symptoms..." â†’ Extra sensitive'
+            'AI: "Based on your diabetes diagnosis..." → Critical flag',
+            'AI: "You mentioned taking Metformin" → Health data detected',
+            'AI: "Your recent surgery on..." → Immediate review required',
+            'Mental health: "Your anxiety symptoms..." → Extra sensitive'
           ],
           technicalDetails: {
             method: 'Medical NLP models + SNOMED CT/ICD-10 matching',
@@ -313,10 +313,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Flags responses containing legal terminology, contract language, or regulatory guidance that could constitute unauthorized legal advice.',
           whyItMatters: 'Providing legal advice without proper licensing exposes your organization to liability. Even disclaimers may not protect you.',
           examples: [
-            'AI: "You should sue them for breach of contract" â†’ Legal advice detected',
-            'AI: "This violates Section 1983 of..." â†’ Flagged for review',
-            'AI: "You have the right to..." â†’ May be legal interpretation',
-            'Safe: "Consider consulting an attorney" â†’ Educational, not advice'
+            'AI: "You should sue them for breach of contract" → Legal advice detected',
+            'AI: "This violates Section 1983 of..." → Flagged for review',
+            'AI: "You have the right to..." → May be legal interpretation',
+            'Safe: "Consider consulting an attorney" → Educational, not advice'
           ],
           technicalDetails: {
             method: 'Legal ontology matching + intent classification',
@@ -337,7 +337,7 @@ export function HITLGuardrails() {
             'Slurs or epithets targeting protected classes',
             'Threats or intimidation',
             'Discriminatory statements about race, gender, religion, etc.',
-            'Subtle bias: "You people always..." â†’ Context-aware detection'
+            'Subtle bias: "You people always..." → Context-aware detection'
           ],
           technicalDetails: {
             method: 'Perspective API + custom ML models',
@@ -361,9 +361,9 @@ export function HITLGuardrails() {
           whatItDoes: 'Automatically detects when AI attempts to issue refunds over $1,000 and routes them to authorized personnel for approval.',
           whyItMatters: 'Large refunds impact revenue, can indicate fraud patterns, and require proper authorization chains per SOX compliance and internal controls.',
           examples: [
-            'AI: "I\'ll process a $1,500 refund" â†’ Blocked, requires approval',
-            'AI: "You qualify for a full refund of $2,400" â†’ Escalated to finance team',
-            'Multiple small refunds totaling >$1000 â†’ Also detected if within 24h'
+            'AI: "I\'ll process a $1,500 refund" → Blocked, requires approval',
+            'AI: "You qualify for a full refund of $2,400" → Escalated to finance team',
+            'Multiple small refunds totaling >$1000 → Also detected if within 24h'
           ],
           technicalDetails: {
             method: 'Intent classification + amount extraction',
@@ -386,9 +386,9 @@ export function HITLGuardrails() {
           whatItDoes: 'Detects when AI offers discounts greater than 20% and requires manager approval to prevent margin erosion.',
           whyItMatters: 'Large discounts affect profitability, pricing strategy, and can set unrealistic customer expectations. Authorization prevents revenue leakage.',
           examples: [
-            'AI: "I can offer you 25% off" â†’ Requires approval',
-            'AI: "Here\'s a 30% discount code: SAVE30" â†’ Blocked',
-            'Combo deals: "Buy one get one 50% off" â†’ Calculated as 25% total discount'
+            'AI: "I can offer you 25% off" → Requires approval',
+            'AI: "Here\'s a 30% discount code: SAVE30" → Blocked',
+            'Combo deals: "Buy one get one 50% off" → Calculated as 25% total discount'
           ],
           technicalDetails: {
             method: 'Price extraction + discount calculation engine',
@@ -417,10 +417,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Queues every email generated by AI for human review before it reaches customers, partners, or external parties.',
           whyItMatters: 'Email is your brand\'s voice. AI errors, tone issues, or factual mistakes in email can damage relationships and violate anti-spam laws.',
           examples: [
-            'Customer support emails â†’ Always reviewed',
-            'Sales outreach â†’ Checked for accuracy and tone',
-            'Partner communications â†’ Verified for professionalism',
-            'Mass emails â†’ Extra scrutiny for CAN-SPAM compliance'
+            'Customer support emails → Always reviewed',
+            'Sales outreach → Checked for accuracy and tone',
+            'Partner communications → Verified for professionalism',
+            'Mass emails → Extra scrutiny for CAN-SPAM compliance'
           ],
           technicalDetails: {
             method: 'Email intent classification + recipient validation',
@@ -443,10 +443,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Intercepts AI attempts to export customer data, user lists, reports, or databases. Routes to data protection officer for approval.',
           whyItMatters: 'Data exports are primary vectors for data breaches. GDPR requires strict controls. Unauthorized exports can lead to massive fines and reputation damage.',
           examples: [
-            'AI: "Exporting customer list to CSV" â†’ Blocked immediately',
-            'AI: "Downloading user activity report" â†’ Requires DPO approval',
-            'API calls exporting >100 records â†’ Flagged automatically',
-            'GDPR data portability requests â†’ Legal review required'
+            'AI: "Exporting customer list to CSV" → Blocked immediately',
+            'AI: "Downloading user activity report" → Requires DPO approval',
+            'API calls exporting >100 records → Flagged automatically',
+            'GDPR data portability requests → Legal review required'
           ],
           technicalDetails: {
             method: 'Data flow monitoring + export detection',
@@ -469,10 +469,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Blocks all account deletion attempts by AI. Routes deletion requests through proper verification and approval workflow.',
           whyItMatters: 'Account deletion is irreversible. Mistakes can delete paying customers, violate retention policies, or fail to comply with "right to deletion" procedures.',
           examples: [
-            'AI: "Deleting your account as requested" â†’ Stopped, requires verification',
-            'Inactive account cleanup â†’ Must have manager approval',
-            'GDPR deletion requests â†’ Legal review + identity verification required',
-            'Accidental deletions â†’ Prevention is critical (no undo)'
+            'AI: "Deleting your account as requested" → Stopped, requires verification',
+            'Inactive account cleanup → Must have manager approval',
+            'GDPR deletion requests → Legal review + identity verification required',
+            'Accidental deletions → Prevention is critical (no undo)'
           ],
           technicalDetails: {
             method: 'Destructive action detection + identity verification',
@@ -501,10 +501,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Every AI response includes a confidence score (0-100%). Responses below 65% are automatically flagged because the AI itself is uncertain.',
           whyItMatters: 'Low confidence means the AI is guessing. In critical applications (support, medical, financial), wrong answers can cause serious harm.',
           examples: [
-            'AI 45% confident: "I think your order was..." â†’ Requires human verification',
-            'AI 60% confident on policy question â†’ Escalated to expert',
-            'Complex technical query with 55% confidence â†’ Routed to specialist',
-            'Simple FAQ with 95% confidence â†’ Auto-approved'
+            'AI 45% confident: "I think your order was..." → Requires human verification',
+            'AI 60% confident on policy question → Escalated to expert',
+            'Complex technical query with 55% confidence → Routed to specialist',
+            'Simple FAQ with 95% confidence → Auto-approved'
           ],
           technicalDetails: {
             method: 'Model logit/probability analysis + calibration',
@@ -527,10 +527,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Runs secondary validation to detect when AI makes up facts, cites non-existent sources, or provides information not in training data.',
           whyItMatters: 'Hallucinations erode trust and can cause serious harm (wrong medical info, fake citations, false claims). Detection prevents brand damage.',
           examples: [
-            'AI cites "Section 123.4.5" that doesn\'t exist â†’ Hallucination detected',
-            'AI: "According to our 2024 study" when no such study exists â†’ Flagged',
-            'Made-up product features or capabilities â†’ Blocked',
-            'Invented customer testimonials or statistics â†’ Requires verification'
+            'AI cites "Section 123.4.5" that doesn\'t exist → Hallucination detected',
+            'AI: "According to our 2024 study" when no such study exists → Flagged',
+            'Made-up product features or capabilities → Blocked',
+            'Invented customer testimonials or statistics → Requires verification'
           ],
           technicalDetails: {
             method: 'Multi-model validation + knowledge base grounding',
@@ -559,10 +559,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Detects when AI attempts to send info to previously unknown email domains or new contacts. Prevents data leakage and social engineering attacks.',
           whyItMatters: 'New domains could be typos, phishing attempts, or unauthorized data exfiltration. Verification protects against social engineering and data breaches.',
           examples: [
-            'AI sends data to "companey.com" (typo) â†’ Caught and corrected',
-            'Request from "ceo@totallyrealcompany.com" â†’ Verified before responding',
-            'First-time vendor communication â†’ Extra scrutiny applied',
-            'Unusual TLD (.xyz, .top) â†’ Higher fraud risk'
+            'AI sends data to "companey.com" (typo) → Caught and corrected',
+            'Request from "ceo@totallyrealcompany.com" → Verified before responding',
+            'First-time vendor communication → Extra scrutiny applied',
+            'Unusual TLD (.xyz, .top) → Higher fraud risk'
           ],
           technicalDetails: {
             method: 'Domain reputation checking + historical analysis',
@@ -585,10 +585,10 @@ export function HITLGuardrails() {
           whatItDoes: 'Identifies VIP customers (high LTV, executives, key accounts) and routes their AI interactions to senior staff for quality assurance.',
           whyItMatters: 'VIP customers expect white-glove service. AI mistakes with these accounts can cost millions in revenue or damage critical relationships.',
           examples: [
-            'Enterprise customer with $1M ARR â†’ Always reviewed by account manager',
-            'Executive from Fortune 500 client â†’ Routed to VP of Customer Success',
-            'Renewal at risk + high LTV â†’ Extra care and personalization',
-            'Board member or investor â†’ CEO review required'
+            'Enterprise customer with $1M ARR → Always reviewed by account manager',
+            'Executive from Fortune 500 client → Routed to VP of Customer Success',
+            'Renewal at risk + high LTV → Extra care and personalization',
+            'Board member or investor → CEO review required'
           ],
           technicalDetails: {
             method: 'CRM integration + customer segmentation',
@@ -856,7 +856,7 @@ export function HITLGuardrails() {
                         </div>
                       </div>
                       <CardDescription className="text-xs">
-                        {item.timestamp} â€¢ {item.sla}
+                        {item.timestamp} • {item.sla}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-2">
@@ -903,7 +903,7 @@ export function HITLGuardrails() {
                       </Button>
                     </div>
                     <CardDescription>
-                      {selectedReview.id} â€¢ {selectedReview.timestamp}
+                      {selectedReview.id} • {selectedReview.timestamp}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -1150,7 +1150,7 @@ export function HITLGuardrails() {
 
                         {!rejectReason.trim() && (
                           <p className="text-xs text-red-600 text-center">
-                            âš ï¸ You must provide a rejection reason to proceed
+                            ⚠️ You must provide a rejection reason to proceed
                           </p>
                         )}
                       </div>
@@ -1164,7 +1164,7 @@ export function HITLGuardrails() {
 
                     {/* Audit Note */}
                     <p className="text-xs text-muted-foreground text-center pt-2 border-t">
-                      â“˜ Approving attaches your name, rationale, and full trace to this action
+                      ⓘ Approving attaches your name, rationale, and full trace to this action
                     </p>
                   </CardContent>
                 </Card>
@@ -1339,7 +1339,7 @@ export function HITLGuardrails() {
                             <span className="text-sm font-medium text-yellow-900">Awaiting Response</span>
                           </div>
                           <p className="text-xs text-yellow-800">
-                            Expected within {escalation.expectedResponseTime} â€¢ {escalation.timeRemaining} remaining
+                            Expected within {escalation.expectedResponseTime} • {escalation.timeRemaining} remaining
                           </p>
                         </div>
                       )}
@@ -1536,15 +1536,15 @@ export function HITLGuardrails() {
                     Triggers define when AI actions require human review. Click any trigger below to expand and see detailed information including:
                   </p>
                   <ul className="text-sm text-blue-800 space-y-1 ml-4">
-                    <li>â€¢ <strong>What it does</strong> - How the trigger works technically</li>
-                    <li>â€¢ <strong>Why it matters</strong> - The business and compliance rationale</li>
-                    <li>â€¢ <strong>Examples</strong> - Real-world scenarios that trigger review</li>
-                    <li>â€¢ <strong>Technical details</strong> - Implementation specifics and accuracy metrics</li>
-                    <li>â€¢ <strong>Compliance impact</strong> - Relevant regulations and standards</li>
-                    <li>â€¢ <strong>Configuration options</strong> - How to customize for your needs</li>
+                    <li>• <strong>What it does</strong> - How the trigger works technically</li>
+                    <li>• <strong>Why it matters</strong> - The business and compliance rationale</li>
+                    <li>• <strong>Examples</strong> - Real-world scenarios that trigger review</li>
+                    <li>• <strong>Technical details</strong> - Implementation specifics and accuracy metrics</li>
+                    <li>• <strong>Compliance impact</strong> - Relevant regulations and standards</li>
+                    <li>• <strong>Configuration options</strong> - How to customize for your needs</li>
                   </ul>
                   <p className="text-sm text-blue-800 mt-2">
-                    ðŸ’¡ <strong>Tip:</strong> Start with recommended triggers enabled, then adjust based on your risk tolerance and team capacity.
+                    💡 <strong>Tip:</strong> Start with recommended triggers enabled, then adjust based on your risk tolerance and team capacity.
                   </p>
                 </div>
               </div>
@@ -2098,7 +2098,7 @@ hitl:
                     <div>
                       <div className="font-medium text-sm">{reviewer.name}</div>
                       <div className="text-xs text-muted-foreground">
-                        {reviewer.reviews} reviews â€¢ {reviewer.avgTime} avg time
+                        {reviewer.reviews} reviews • {reviewer.avgTime} avg time
                       </div>
                     </div>
                     <Badge variant={reviewer.overrides > 2 ? 'secondary' : 'outline'}>
@@ -2180,7 +2180,7 @@ hitl:
               <p className="text-sm text-muted-foreground mb-3">
                 HITL Guardrails ensure AI never acts alone on sensitive tasks. Set granular policies,
                 route to the right reviewers, and retain full audit trails. Meet internal controls
-                ("four-eyes"), regulatory expectations, and customer trustâ€”all without slowing teams down.
+                ("four-eyes"), regulatory expectations, and customer trust—all without slowing teams down.
               </p>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm">
