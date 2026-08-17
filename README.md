@@ -24,6 +24,22 @@ Other scripts:
 | `npm run build` | Production build to `dist/` |
 | `npm run preview` | Serve the production build locally |
 | `npm run typecheck` | `tsc --noEmit` |
+| `npm run devnotes` | Regenerate the developer handover notes |
+
+## Developer handover notes
+
+Start here if you are new to this codebase:
+**[docs/PLCY_customer_admin_portal-developer-notes.md](docs/PLCY_customer_admin_portal-developer-notes.md)**
+— overview, business rules with worked examples, data fields and their intended sources,
+edge cases, integrations, permissions, code-vs-intent mismatches, and open questions.
+
+The same notes are readable inside the app: run `npm run dev` and click the floating **info
+button** in the bottom-right corner. Both renderings come from one source,
+`src/app/devNotes/content.js`, so they cannot drift. Edit that file and run `npm run devnotes`;
+never edit the markdown directly.
+
+The in-app panel is gated on `import.meta.env.DEV` and is dead-code eliminated from production
+builds — verified by checking that no notes content appears in `dist/`.
 
 ## Stack
 

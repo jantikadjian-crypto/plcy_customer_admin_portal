@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "devnotes": "node scripts/generate-dev-notes.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "1.2.3",

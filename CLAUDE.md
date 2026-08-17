@@ -8,6 +8,20 @@ Ported from a Figma Make export; see README.md for the porting fixes.
 - `npm run dev` — dev server on **port 3002**
 - `npm run build` — production build
 - `npm run typecheck` — `tsc --noEmit`
+- `npm run devnotes` — regenerate the developer-notes markdown from its source
+
+## Dev notes (single source)
+
+Handover documentation lives in **`src/app/devNotes/content.js`** and nowhere else. Two
+consumers render it: `npm run devnotes` writes
+`docs/PLCY_customer_admin_portal-developer-notes.md`, and `DevNotesLauncher.tsx` renders the
+in-app panel behind the floating info button. **Never hand-edit the generated markdown** —
+edit `content.js` and regenerate, or the two will drift.
+
+The launcher is gated on `import.meta.env.DEV` in both `App.tsx` and the component itself.
+Vite replaces that with `false` in production, so Rollup drops the component and all notes
+content from the shipped bundle. Verified: no notes strings appear in `dist/`. Keep it that
+way — do not make the gate dynamic, or the content will start shipping to customers.
 
 ## Conventions
 

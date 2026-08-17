@@ -83,6 +83,7 @@ import { GovernanceAuditLog } from './components/GovernanceAuditLog';
 import { AuditAndLogs } from './components/AuditAndLogs';
 import { AuditEvidenceVault } from './components/AuditEvidenceVault';
 import { AdminNotifications } from './components/AdminNotifications';
+import { DevNotesLauncher } from './components/DevNotesLauncher';
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -633,6 +634,11 @@ export default function App() {
 
       {/* Toast Notifications */}
       <Toaster />
+
+      {/* Developer handover notes. `import.meta.env.DEV` is statically replaced
+          with `false` by Vite in production builds, so this branch and the whole
+          DevNotesLauncher module are dropped from the shipped bundle. */}
+      {import.meta.env.DEV && <DevNotesLauncher />}
     </>
   );
 }
