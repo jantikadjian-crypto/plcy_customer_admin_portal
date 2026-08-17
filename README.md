@@ -25,6 +25,17 @@ Other scripts:
 | `npm run preview` | Serve the production build locally |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run devnotes` | Regenerate the developer handover notes |
+| `npm run build:artifact` | Bundle the whole portal into one shareable HTML file |
+
+## Sharing a clickable build
+
+`npm run build:artifact` writes `dist-artifact/plcy-portal.html` — the entire portal as a
+single ~2.1 MB file with the CSS, JS, and logo all inlined and **zero external requests**.
+Open it in any browser, email it, or publish it as a Claude artifact. It works because the app
+makes no network calls and has only one binary asset.
+
+The script fails loudly if any asset does not inline, rather than silently producing a page
+that would break wherever external requests are blocked.
 
 ## Developer handover notes
 
